@@ -10,16 +10,25 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:visual-config.helloWorld"
+    "onCommand:visual-config.helloWorld",
+    "onView:moduleTree"
   ],
-  "main": "./extension.js",
+  "main": "./src/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "visual-config.helloWorld",
         "title": "Hello World"
       }
-    ]
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "nodeDependencies",
+          "name": "Node Dependencies"
+        }
+      ]
+    }
   },
   "scripts": {
     "lint": "eslint .",
